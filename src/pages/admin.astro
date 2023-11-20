@@ -19,8 +19,22 @@ const config = {
   logo_url: "https://nebulix.unfolding.io/logo.svg",
   local_backend: true,
   backend: {
-    name: "test-repo",
+		name: 'git-gateway',
+		repo: 'crydestaahl/TicksterEventSite',
+		branch: 'main',
+    api_root: 'https://api.github.com',
+    site_domain: 'tranquil-fox-6cf545.netlify.app',
+    base_url: 'https://api.netlify.com',
+    auth_endpoint: 'auth',
+    commit_messages: {
+      create: 'Create {{collection}} “{{slug}}”',
+      update: 'Update {{collection}} “{{slug}}”',
+      delete: 'Delete {{collection}} “{{slug}}”',
+      uploadMedia: '[skip ci] Upload “{{path}}”',
+      deleteMedia: '[skip ci] Delete “{{path}}”',
+    }
   },
+  
   search: "true",
   media_folder: "src/assets",
   public_folder: "/src/assets",
